@@ -2,11 +2,24 @@ const FooterListGenerate = (props) => {
     return props.lst.map((item) => {
         return (
             <li key={item.key}>
-                <a href={item.link} target={item.newWindow? "_blank" : "_self"} >{item.name}</a>
+                <a className="font-karla text-pjgreen antialiased underline drop-shadow-xl hover:text-xl hover:bg-pjgray" href={item.link} target={item.newWindow? "_blank" : "_self"} >{item.name}</a>
             </li>
         )}
     )
 };
+
+const SectionListGenerate = (props) => {
+    return props.sectionList.map((section) => {
+        return (
+            <section className="w-1/2 lg:max-w-1/8 p-10">
+                <h4 className="font-karla font-bold text-lg text-pjblack text-left">{section.name}</h4>
+                <ul className="mt-3 text-left">
+                    <FooterListGenerate lst={section.lst}/>
+                </ul>
+            </section>
+        )}
+    )
+}
 
 const contacts = [
     {name: "Address", key: "address", link: "https://maps.app.goo.gl/G4T1MPbhjSjQvtS38", newWindow: true},
@@ -22,27 +35,19 @@ const socialMediaLinks = [
 
 
 export default function Footer(props) {
+
+    const sections = [
+        {name: "Doormat Navigation", lst: props.pages},
+        {name: "Contact", lst: contacts},
+        {name: "Social Media Links", lst: socialMediaLinks},
+    ]
+
     return (
-        <footer>
-            <section>
-                <img src="/image/footer-logo.png" alt="little lemon logo" />
+        <footer className="m-3 flex flex-wrap lg:mx-10 lg:flex-nowrap lg:justify-center">
+            <section className="w-1/2 flex justify-center items-center">
+                <img className="w-24" src="/image/footer-logo.png" alt="little lemon logo" />
             </section>
-            <section>
-                <h4>Doormat Navigation</h4>
-                <or>
-                    <FooterListGenerate lst={props.pages}/>
-                </or>
-            </section>
-            <section>
-                <h4>Contact</h4>
-                <or>
-                    <FooterListGenerate lst={contacts}/>
-                </or>
-            </section>
-                <h4>Social Media Links</h4>
-                <or>
-                    <FooterListGenerate lst={socialMediaLinks}/>
-                </or>
+            <SectionListGenerate sectionList={sections} />
         </footer>
     )
 }

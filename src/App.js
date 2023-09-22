@@ -1,4 +1,4 @@
-import './App.css';
+//import './App.css';
 import Header from './Header';
 import Nav from './Nav';
 import Main from './Main';
@@ -14,9 +14,11 @@ const pagesToObj = pages.map((page) => {
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Nav pages={pagesToObj} />
+    <div className="mt-3 lg:mt-10">
+      <div className="m-3 lg:mx-10 lg:flex lg:flex-nowrap lg:justify-between">
+        <Header />
+        <Nav pages={pagesToObj} />
+      </div>
       <Main />
       <Footer pages={pagesToObj} />
     </div>
