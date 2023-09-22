@@ -1,9 +1,11 @@
+import Reservation from "./Reservation";
+import ReservationForm from "./ReservationForm";
+
 export default function Main() {
     return (
         <main>
-            <article>
-                <p>Main</p>
-            </article>
+            <Reservation />
+            <ReservationForm />
         </main>
     )
 }

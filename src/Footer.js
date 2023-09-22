@@ -24,28 +24,25 @@ const socialMediaLinks = [
 export default function Footer(props) {
     return (
         <footer>
-            <div>
+            <section>
                 <img src="/image/footer-logo.png" alt="little lemon logo" />
-            </div>
-            <div>
-                <p>Doormat Navigation</p>
+            </section>
+            <section>
+                <h4>Doormat Navigation</h4>
                 <or>
                     <FooterListGenerate lst={props.pages}/>
                 </or>
-            </div>
-            <div>
-                <p>Contact</p>
+            </section>
+            <section>
+                <h4>Contact</h4>
                 <or>
                     <FooterListGenerate lst={contacts}/>
                 </or>
-            </div>
-                <p>Social Media Links</p>
+            </section>
+                <h4>Social Media Links</h4>
                 <or>
                     <FooterListGenerate lst={socialMediaLinks}/>
                 </or>
-            <div>
-
-            </div>
         </footer>
     )
 }
