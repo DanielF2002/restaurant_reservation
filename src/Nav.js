@@ -1,11 +1,19 @@
-export default function Nav() {
+
+
+export default function Nav(props) {
     return (
-        <nav>
-            <ul>
-                <li>
-                    Nav
-                </li>
-            </ul>
+        <nav className="nav">
+            <or>
+                {props.pages
+                    .map((page) => {
+                        return (
+                            <li key={page.key}>
+                                <a href={page.link}>{page.name}</a>
+                            </li>
+                        )
+                    })
+                }
+            </or>
         </nav>
     )
 }
