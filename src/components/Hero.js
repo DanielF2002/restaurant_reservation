@@ -1,7 +1,7 @@
 const imgs = [
-    {name: "picture of bruchetta", src: "image/bruchetta.jpg"},
-    {name: "picture of lemon desert", src: "image/lemondesert.jpg"},
-    {name: "picture of greek salad", src: "image/greeksalad.jpg"},
+    {name: "bruchetta", src: "image/bruchetta.jpg"},
+    {name: "lemon desert", src: "image/lemondesert.jpg"},
+    {name: "greek salad", src: "image/greeksalad.jpg"},
 ]
 // TODO fix pic, fix mobile width, fix mobile pic scroll
 /**

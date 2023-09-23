@@ -3,9 +3,20 @@
  */
 export default function FooterList(props) {
     return props.lst.map((item) => {
+        let property = {className:
+            "font-karla text-pjgreen antialiased underline drop-shadow-xl hover:text-xl hover:bg-pjgray hover:no-underline",
+        }
+        if (item.newWindow) {
+            property = {
+                ...property,
+                target: "_blank",
+                rel: "noopener noreferrer",
+            }
+        }
+
         return (
             <li key={item.key}>
-                <a className="font-karla text-pjgreen antialiased underline drop-shadow-xl hover:text-xl hover:bg-pjgray hover:no-underline" href={item.link} target={item.newWindow ? "_blank" : "_self"} >{item.name}</a>
+                <a {...property}>${item.name}</a>
             </li>
         )
     }
