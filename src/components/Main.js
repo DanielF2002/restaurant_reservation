@@ -1,11 +1,14 @@
+import Hero from "./Hero";
 import Reservation from "./Reservation";
-import ReservationForm from "./ReservationForm";
 
+/**
+ * The Main component.
+ */
 export default function Main() {
     return (
         <main>
+            <Hero />
             <Reservation />
-            <ReservationForm />
         </main>
     )
 }

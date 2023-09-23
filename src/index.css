@@ -1,3 +1,4 @@
+/* Use tailwind CSS, so all CSS effect is in the HTML files. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

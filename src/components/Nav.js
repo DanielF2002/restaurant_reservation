@@ -1,6 +1,10 @@
+/**
+ * The Nav component.
+ * It is in the center on small screen, as on the right corner on large screen.
+ */
 export default function Nav(props) {
     return (
-        <nav className="w-full my-auto lg:w-1/2">
+        <nav className="w-full my-auto lg:w-2/3">
             <ul className="list-none flex flex-wrap justify-between lg:flex-nowrap">
                 {props.pages
                     .map((page) => {
