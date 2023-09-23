@@ -15,7 +15,7 @@ export default function ReservationForm() {
     
     return (
         <form onSubmit={handleSubmit}>
-        <div className="invisible h-0">
+        <div>
             <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-left">
                 <label className="block font-karla text-lg antialiased drop-shadow-xl font-bold text-pjgreen mb-2" htmlFor="numbers">Party Size:</label><br/>
                 <input className=" font-karla text-lg text-pjblack border rounded w-full accent-pjgreen focus:accent-pjgreen" id="numbers" name="numbers" type="range" min="1" max="8" value="4" />
@@ -34,7 +34,7 @@ export default function ReservationForm() {
                 </select>
             </div>
         </div>
-        <div>
+        <div className="invisible h-0">
             <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-left">
                 <label className="block font-karla text-lg antialiased drop-shadow-xl font-bold text-pjgreen mb-2" htmlFor="firstname">First name:</label><br/>
                 <input className="font-karla text-lg bg-pjgray shadow border rounded w-full py-2 px-3 text-pjblack leading-tight focus:outline-none focus:shadow-outline" id="firstname" name="firstname" type="text" value="ddd" />

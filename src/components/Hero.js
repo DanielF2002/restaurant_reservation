@@ -11,7 +11,7 @@ const imgs = [
 export default function Hero() {
     return (
         <section className="bg-pjgreen">
-            <section className="mx-3 py-6 lg:mx-36">
+            <section className="mx-3 pt-6 lg:mx-36">
                 <h2 className="font-markazi font-medium text-6xl text-pjyellow text-left">
                     Welcome to Little Lemon
                 </h2>
@@ -24,11 +24,11 @@ export default function Hero() {
                             Treat your palate to our delightful, gourmet creations served in a welcoming and charming setting.
                         </p>
                     </article>
-                    <aside className="basis-1/2 flex flex-nowrap lg:justify-between lg:basis-2/3">
+                    <aside className="basis-1/2 flex gap-2 w-full overflow-scroll lg:overflow-hidden lg:p-0 lg:gap-5 lg:justify-between lg:basis-2/3">
                         {
                             imgs.map((img) => {
                                 return (
-                                    <section key={img.name} className="w-60"><img className="max-w-full h-auto rounded-xl" src={img.src} alt={img.name} /></section>
+                                    <section key={img.name} className="flex justify-center items-center flex-shrink-0  basis-5/6 lg:basis-1/4 lg:flex-grow "><img className="w-full h-auto rounded-xl aspect-[4/3]" src={img.src} alt={img.name} /></section>
                                 )
                             })
                         }

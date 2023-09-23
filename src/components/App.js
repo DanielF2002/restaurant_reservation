@@ -26,8 +26,8 @@ const pagesToObj = pages.map((page) => {
 
 function App() {
   return (
-    <div className="mt-3 lg:mt-10">
-      <div className="m-3 lg:mx-36 lg:flex lg:flex-nowrap lg:justify-between">
+    <div>
+      <div className="m-3 space-y-2 lg:mx-36 lg:flex lg:flex-nowrap lg:justify-between">
         <Header />
         <Nav pages={pagesToObj} />
       </div>

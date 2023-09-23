@@ -29,7 +29,7 @@ export default function Footer(props) {
     ]
 
     return (
-        <footer className="m-3 flex flex-wrap lg:mx-10 lg:flex-nowrap lg:justify-center">
+        <footer className="m-3 flex flex-wrap lg:mx-36 lg:flex-nowrap lg:justify-center">
             <section className="w-1/2 flex justify-center items-center">
                 <img className="w-24" src="/image/footer-logo.png" alt="little lemon logo" />
             </section>

@@ -3,9 +3,9 @@ import ReservationForm from "./reservation/ReservationForm";
 
 export default function Reservation() {
     return (
-        <section className="mx-3 lg:mx-10">
+        <section className="mx-3 lg:mx-36">
             <section className="my-auto lg:flex lg:justify-between">
-                <section className="w-full lg:w-1/2 lg:mx-20 lg:mt-10">
+                <section className="mt-5 w-full lg:w-1/2">
                     <Indications />
                     <ReservationForm />
                 </section>
