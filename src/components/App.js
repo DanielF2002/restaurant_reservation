@@ -1,12 +1,12 @@
 import Header from './Header';
 import Nav from './Nav';
-import Main from './Main';
-import Footer from './Footer';
+import Main from './main/Main';
+import Footer from './footers/Footer';
 
 /**
  * The nav menu, used for Nav and Footer.
  */
-const pages = ["Home", "About", "Menu", "Reservations", "Order online", "Login"];
+const pages = ["Home", "About", "Specials", "Testimonials", "Order Online", "Reservations"];
 /**
   Transfer the pages to a obj.
  */
