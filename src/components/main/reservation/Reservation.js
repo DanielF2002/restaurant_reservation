@@ -1,6 +1,10 @@
 import ReservationSubPage from "./ReservationSubPage"
 
 /**
+ * The form filling is splitted into 2 parts when set to true.
+ */
+const isSplit = false;
+/**
  * The list of pictures.
  */
 const imgs = [
@@ -17,14 +21,14 @@ const imgs = [
 export default function Reservation() {
     return (
         <>
-            <section className="bg-pjgreen">
+            <section className="bg-pjorange lg:my-5 lg:py-10">
                 <section className="mx-3 pt-6 lg:mx-36">
-                    <h2 className="font-markazi font-medium text-6xl text-pjyellow text-left">
+                    <h2 className="font-markazi font-medium text-6xl text-pjgreen text-left">
                         Welcome to Little Lemon
                     </h2>
                     <section className="py-5 flex justify-between flex-nowrap">
                         <article className="space-y-4  basis-1/2 lg:basis-1/4 text-left">
-                            <h3 className="font-markazi text-4xl text-pjorange">
+                            <h3 className="font-markazi text-4xl text-pjgray">
                                 Reserve a table
                             </h3>
                             <p className="font-karla text-pjgray">
@@ -43,7 +47,7 @@ export default function Reservation() {
                     </section>
                 </section>
             </section>
-            <ReservationSubPage />
+            <ReservationSubPage isSplit={isSplit}/>
         </>
     )
 }

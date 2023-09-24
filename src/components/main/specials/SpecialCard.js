@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 /**
  * The Card component in Special.
  */
@@ -14,20 +15,21 @@ export default function SpecialCard(props) {
                             </section>
                             <section className="bg-pjgray space-y-5 py-5">
                                 <section className="mx-3 flex flex-nowrap justify-between">
-                                    <h7 className="font-karla font-bold text-lg text-pjblack drop-shadow">{item.name}</h7>
+                                    <h6 className="font-karla font-bold text-lg text-pjblack drop-shadow">{item.name}</h6>
                                     <p className="font-karla font-medium text-pjorange drop-shadow">{item.price}</p>
                                 </section>
                                 <section className="mx-3 text-left">
                                     <p className="font-karla text-gray-500">{item.description}</p>
                                 </section>
                                 <section className="mx-3 flex flex-nowrap">
-                                    <p className="font-karla font-bold text text-pjblack drop-shadow">
+                                <Link to="/order">
+                                    <p className="font-karla font-bold text text-pjblack drop-shadow hover:shadow-lg">
                                         Order a delivery
-                                        <button className="ml-2 pt-1" type="button">
-                                            <img className="h-4 w-4" src="image/transport.png" alt="button" border="0" />
-                                        </button>
+                                            <button className="ml-2 pt-1" type="button">
+                                                <img className="h-4 w-4" src="image/transport.png" alt="button" border="0" />
+                                            </button>
                                     </p>
-                                    <img/>
+                                </Link>
                                 </section>
                             </section>
                         </section>

@@ -17,7 +17,7 @@ export default function RateCards(props) {
                             <article className="row-span-2 col-span-2 text-left font-karla bg-pjblack bg-opacity-60 text-pjgray p-2 rounded-lg">
                                 <p>{item.content}</p>
                             </article>
-                            <h7 className="my-3 content-center font-karla text-pjgray drop-shadow-sm">{item.name}</h7>
+                            <h6 className="my-3 content-center font-karla text-pjgray drop-shadow-sm">{item.name}</h6>
                         </section>
                     )
                 })

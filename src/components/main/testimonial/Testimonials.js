@@ -16,8 +16,8 @@ const rates = [
 export default function Testimonials() {
     return (
         <section className="bg-pjyellow my-3 py-3 lg:my-10">
-            <section className="mx-3 my-5 pt-6 lg:mx-36 lg:my-32">
-                <h2 className="font-markazi font-bold text-3xl lg:pb-12">Testimonials</h2>
+            <section className="mx-3 my-3 pt-6 lg:mx-36">
+                <h2 className="font-karla font-medium text-pjgray text-3xl">Testimonials</h2>
                 <RateCards lst={rates}/>
             </section>
         </section>

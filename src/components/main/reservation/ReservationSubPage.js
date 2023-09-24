@@ -4,12 +4,12 @@ import ReservationForm from "./ReservationForm";
 /**
  * The component of page of form.
  */
-export default function ReservationSubPage() {
+export default function ReservationSubPage(props) {
     return (
         <section className="mx-3 lg:mx-36">
             <section className="my-auto lg:flex lg:justify-between">
                 <section className="mt-5 w-full lg:w-1/2">
-                    <Indications />
+                    {props.isSplit && <Indications />}
                     <ReservationForm />
                 </section>
                 <section className="invisible h-0 lg:visible lg:h-auto lg:w-1/2 lg:flex lg:justify-center lg:items-center">

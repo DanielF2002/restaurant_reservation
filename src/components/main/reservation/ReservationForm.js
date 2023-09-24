@@ -17,7 +17,7 @@ export default function ReservationForm() {
         <div>
             <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-left">
                 <label className="block font-karla text-lg antialiased drop-shadow-xl font-bold text-pjgreen mb-2" htmlFor="numbers">Party Size:</label><br/>
-                <input className=" font-karla text-lg text-pjblack border rounded w-full accent-pjgreen focus:accent-pjgreen" id="numbers" name="numbers" type="range" min="1" max="8" value="4" />
+                <input className=" font-karla text-lg border rounded w-full accent-pjorange focus:accent-pjorange" id="numbers" name="numbers" type="range" min="1" max="8" value="4" />
             </div>
             <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 text-left">
                 <label className="block font-karla text-lg antialiased drop-shadow-xl font-bold text-pjgreen mb-2" htmlFor="date">Date and time:</label><br/>
@@ -48,7 +48,7 @@ export default function ReservationForm() {
             </div>
         </div>
         <FeedBack visible={0}/>
-        <button className="bg-pjgreen text-pjyellow font-karla text-lg w-2/3 py-2 px-4 rounded-lg shadow-lg hover:outline-none hover:shadow-outline hover:bg-pjyellow hover:text-pjgreen" id="submit" name="submit" type="sumbit">Submit</button>
+        <button className="bg-pjorange text-pjgray font-karla text-lg w-2/3 py-2 px-4 rounded-lg shadow-lg hover:outline-none hover:shadow-outline hover:bg-pjyellow hover:text-pjgreen" id="submit" name="submit" type="sumbit">Submit</button>
         </form>
     )
 }

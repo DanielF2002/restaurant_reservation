@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SpecialCard from "./SpecialCard"
 
 /**
@@ -16,10 +17,12 @@ const specialList = [
  */
 export default function Specials() {
     return (
-        <section className="mx-3 pt-6 lg:mx-36 lg:mt-20">
+        <section className="mx-3 pt-6 lg:mx-36 lg:mt-10">
             <section className="flex flex-nowrap justify-between">
-                <h2 className="w-1/6 font-karla font-medium text-3xl text-pjblack text-left">Specials</h2>
-                <button className="px-2 font-karla text-lg text-pjgray bg-pjgreen rounded-xl lg:px-0 lg:w-1/6 lg:h-12 hover:outline-none hover:shadow-outline hover:bg-pjyellow">Online Menu</button>
+                <h2 className="w-1/6 font-karla font-medium text-3xl text-pjgreen drop-shadow-lg text-left underline">Specials</h2>
+                <Link className="px-2 lg:px-0 lg:w-1/6 lg:h-12" to="/order">
+                    <button className="w-full px-2 font-karla text-lg text-pjgray bg-pjgreen rounded-xl lg:px-0 lg:h-12 hover:outline-none hover:shadow-outline hover:bg-pjyellow">Online Menu</button>
+                </Link>
             </section>
             <section>
                 <SpecialCard lst={specialList}/>
