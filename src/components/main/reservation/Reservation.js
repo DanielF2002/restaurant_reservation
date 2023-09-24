@@ -1,4 +1,7 @@
-import ReservationSubPage from "./ReservationSubPage"
+import ReservationForm from "./ReservationForm";
+import Indications from "./Indications";
+import { useEffect, useReducer } from "react";
+import { fetchAPI } from "./mockApi";
 
 /**
  * The form filling is splitted into 2 parts when set to true.
@@ -17,11 +20,43 @@ const imgs = [
  * Mainly, there is only hero page in the component and in the end there is the rest component called SubPage.
  * There is 2 cols on smaller screen and 4 cols on larger screen.
  * The description of restaurant is from Chat-GPT.
+ * 
+ * Please note there is not a Main component so the availableTimes useState is here.
  */
 export default function Reservation() {
+
+    const fetchAvailableTime = (date) => {
+        if (date && date !== undefined) {
+            fetchAPI(date)
+            .then((response) => dispatch({type:"update", status: "available", date: date, lst: [" "].concat(response)}))
+            .catch((e, date) => dispatch({type:"update", status: "unavailable", date: date, lst: []}));
+        }
+    }
+
+    useEffect(() => {
+        fetchAvailableTime();
+    }, []);
+
+    const initTimes = {status: "empty", date: "", list:[]};
+
+    function reducer(availableTimes, action) {
+        switch (action.type) {
+            case "update": return {status: action.status, date: action.date, lst: action.lst};
+            case "fetch": {
+                fetchAvailableTime(action.date);
+                return availableTimes;
+            }
+            default: console.log(action);
+        }
+    }
+
+    const [availableTimes, dispatch] = useReducer(reducer, initTimes);
+
+    console.log(availableTimes);
+
     return (
         <>
-            <section className="bg-pjorange lg:my-5 lg:py-10">
+            <div className="bg-pjorange lg:my-5 lg:py-10">
                 <section className="mx-3 pt-6 lg:mx-36">
                     <h2 className="font-markazi font-medium text-6xl text-pjgreen text-left">
                         Welcome to Little Lemon
@@ -46,8 +81,20 @@ export default function Reservation() {
                         </aside>
                     </section>
                 </section>
-            </section>
-            <ReservationSubPage isSplit={isSplit}/>
+            </div>
+            <div className="mx-3 lg:mx-36 lg:mb-10">
+                <div className="my-auto lg:flex lg:justify-between">
+                    <div className="mt-5 w-full lg:w-1/2">
+                        {isSplit && <Indications />}
+                        <ReservationForm availableTimes={availableTimes} dispatch={dispatch}/>
+                    </div>
+                    <div className="invisible h-0 lg:visible lg:h-auto lg:w-1/2 lg:flex lg:justify-center lg:items-center">
+                        <div className="lg:w-80">
+                            <img className="max-w-full h-auto rounded-xl opacity-70" src="image/restauranfood.jpg" alt="restaurant food"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

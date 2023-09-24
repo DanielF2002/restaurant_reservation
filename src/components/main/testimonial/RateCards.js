@@ -6,19 +6,19 @@ export default function RateCards(props) {
             {
                 props.lst.map((item)=>{
                     return (
-                        <section key={item.name} className="bg-pjorange grid grid-cols-3 p-2 pb-8 space-x-2 rounded-lg">
+                        <article key={item.name} className="bg-pjorange grid grid-cols-3 p-2 pb-8 space-x-2 rounded-lg">
                             <h5 className="my-3 content-center font-karla font-medium text-lg text-pjgray drop-shadow">Rating</h5>
                             <RateStars count={item.star} />
-                            <section className="flex items-center">
-                                <section className="w-24 h-24 rounded-full">
+                            <div className="flex items-center">
+                                <div className="w-24 h-24 rounded-full">
                                     <img className="w-full aspect-square rounded-full" src={item.src} alt={item.name}/>
-                                </section>
-                            </section>
-                            <article className="row-span-2 col-span-2 text-left font-karla bg-pjblack bg-opacity-60 text-pjgray p-2 rounded-lg">
+                                </div>
+                            </div>
+                            <div className="row-span-2 col-span-2 text-left font-karla bg-pjblack bg-opacity-60 text-pjgray p-2 rounded-lg">
                                 <p>{item.content}</p>
-                            </article>
+                            </div>
                             <h6 className="my-3 content-center font-karla text-pjgray drop-shadow-sm">{item.name}</h6>
-                        </section>
+                        </article>
                     )
                 })
             }

@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
  */
 export default function SpecialCard(props) {
     return (
-        <section className="flex w-full gap-5 overflow-scroll lg:overflow-hidden lg:p-0 lg:gap-20 lg:justify-between lg:basis-full">
+        <div className="flex w-full gap-5 overflow-scroll lg:overflow-hidden lg:p-0 lg:gap-20 lg:justify-between lg:basis-full">
             {
                 props.lst.map((item)=>{
                     let key = item.name.replace(/\s/g, '').toLowerCase();
                     return (
-                        <section key={`special-card-${key}`} className="w-5/6 mt-8 flex-shrink-0 space-y-0 lg:flex-1 lg:flex-grow">
-                            <section>
+                        <div key={`special-card-${key}`} className="w-5/6 mt-8 flex-shrink-0 space-y-0 lg:flex-1 lg:flex-grow">
+                            <div>
                                 <img className="w-full aspect-[4/3] rounded-t-xl" src={item.src} alt={item.name}/>
-                            </section>
-                            <section className="bg-pjgray space-y-5 py-5">
-                                <section className="mx-3 flex flex-nowrap justify-between">
+                            </div>
+                            <article className="bg-pjgray space-y-5 py-5">
+                                <div className="mx-3 flex flex-nowrap justify-between">
                                     <h6 className="font-karla font-bold text-lg text-pjblack drop-shadow">{item.name}</h6>
                                     <p className="font-karla font-medium text-pjorange drop-shadow">{item.price}</p>
-                                </section>
-                                <section className="mx-3 text-left">
+                                </div>
+                                <div className="mx-3 text-left">
                                     <p className="font-karla text-gray-500">{item.description}</p>
-                                </section>
-                                <section className="mx-3 flex flex-nowrap">
+                                </div>
+                                <div className="mx-3 flex flex-nowrap">
                                 <Link to="/order">
                                     <p className="font-karla font-bold text text-pjblack drop-shadow hover:shadow-lg">
                                         Order a delivery
@@ -30,12 +30,12 @@ export default function SpecialCard(props) {
                                             </button>
                                     </p>
                                 </Link>
-                                </section>
-                            </section>
-                        </section>
+                                </div>
+                            </article>
+                        </div>
                     )
                 })
             }
-        </section>
+        </div>
     )
 }

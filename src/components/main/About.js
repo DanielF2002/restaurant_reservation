@@ -4,9 +4,9 @@
  */
 export default function About() {
     return (
-        <section className="bg-pjorange pb-3 lg:pb-0">
-            <section className="mx-3 my-5 pt-6 lg:mx-36 flex flex-wrap justify-between lg:flex-nowrap lg:my-28">
-                <section className="text-left basis-full lg:basis-1/2">
+        <div className="bg-pjorange pb-3 lg:pb-0">
+            <div className="mx-3 my-5 pt-6 lg:mx-36 flex flex-wrap justify-between lg:flex-nowrap lg:my-28">
+                <article className="text-left basis-full lg:basis-1/2">
                     <h1 className="my-5 font-markazi font-medium text-6xl text-pjgreen text-left">
                         Little Lemon
                     </h1>
@@ -18,16 +18,16 @@ export default function About() {
                             Step into a world of culinary excellence at Little Lemon, where every dish is a masterpiece waiting to be savored..
                         </p>
                     </article>
-                </section>
-                <section className="basis-full space-y-5 lg:basis-1/2 lg:relative">
-                    <section className="w-full aspect-[3-4] lg:absolute lg:top-12 lg:left-48 lg:w-72">
+                </article>
+                <div className="basis-full space-y-5 lg:basis-1/2 lg:relative">
+                    <div className="w-full aspect-[3-4] lg:absolute lg:top-12 lg:left-48 lg:w-72">
                         <img className="rounded-lg lg:rounded-none" src="image/marioandadriana.jpg" alt="Mario and Adriana"></img>
-                    </section>
-                    <section className="w-full aspect-[3-4] lg:absolute lg:top-24 lg:w-72">
+                    </div>
+                    <div className="w-full aspect-[3-4] lg:absolute lg:top-24 lg:w-72">
                         <img className="rounded-lg lg:rounded-none" src="image/marioandadrianb.jpg" alt="Mario and Adriana another"></img>
-                    </section>
-                </section>
-            </section>
-        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

@@ -15,11 +15,11 @@ const rates = [
  */
 export default function Testimonials() {
     return (
-        <section className="bg-pjyellow my-3 py-3 lg:my-10">
+        <div className="bg-pjyellow my-3 py-3 lg:my-10">
             <section className="mx-3 my-3 pt-6 lg:mx-36">
                 <h2 className="font-karla font-medium text-pjgray text-3xl">Testimonials</h2>
                 <RateCards lst={rates}/>
             </section>
-        </section>
+        </div>
     )
 }
