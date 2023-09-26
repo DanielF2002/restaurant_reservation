@@ -47,8 +47,9 @@ const submitAPI = (formData) => {
         let success = Math.floor(Math.random()*10);
         setTimeout(() => {
             if (success > 4) {
-                console.log("mockApi return: submission done", formData, success);
-                resolve(true); // Simulate successful submission
+                const reservationId = Math.floor(Math.random()*100000);
+                console.log("mockApi return: submission done", formData, reservationId, success);
+                resolve(reservationId); // Simulate successful submission
             } else {
                 console.log("mockApi return: submission failed", formData, success);
                 reject(new Error('Form submission failed.'));
