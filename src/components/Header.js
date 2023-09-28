@@ -9,7 +9,6 @@ export default function Header(){
             <div className="flex justify-center items-center lg:justify-between">
                 <img src="image/Logo.png"  className="w-1/2" alt="little lemon logo" />
             </div>
-            <div>ddd</div>
         </header>
     )
 }

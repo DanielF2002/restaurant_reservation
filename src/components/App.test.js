@@ -35,16 +35,19 @@ describe("Feedback Form", () => {
   })
 
   test("Submit", () => {
-    const date = "2023-01-01";
+    const date = "2023-09-24";
     const time = "19:00";
     const guests = "3";
     const occasion = "Anniversary";
     const testHandleSubmit = jest.fn();
     render(<ReservationForm onSubmit={testHandleSubmit} />);
 
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     const dateInput = screen.getByLabelText(/Choose date/);
     fireEvent.change(dateInput, { target: { value: date } });
-
     const timeInput = screen.getByLabelText(/Choose time/);
     fireEvent.change(timeInput, { target: { value: time } });
 
